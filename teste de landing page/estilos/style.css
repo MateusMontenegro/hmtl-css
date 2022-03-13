@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap');
 
 *{
     padding: 0%;
@@ -6,15 +8,23 @@
     box-sizing: border-box;
 }
 :root{
-    --cor1:rgba(255, 0, 0, 0.76);
+    --cor1:#0F71D9;
+    --cor2: #05C5F0;
+    --cor3: #0527F0;
+    --font1:'Anton', sans-serif;
+    --font2: 'Mulish', sans-serif;
 }
 html, body{
-    height: 100%;
+    height: 200vh;
 }
+.sidebar-pos{
+    position: absolute;
+}
+
 .sidebar{
     position: fixed;
     height: 100%;
-    width: 250px;
+    width: 18vw;
     background-color: var(--cor1);
 }
 
@@ -23,7 +33,7 @@ html, body{
     margin-left: 25%;
     width: 50%;
     border-radius: 50%;
-    border: 6px solid rgba(255, 114, 114, 0.795) ;
+    border: 6px solid #5c9bdf ;
 }
 
 .menu{
@@ -32,16 +42,77 @@ html, body{
 }
 .menu a{
     display: block;
+    margin: auto;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     opacity: .5;
+    font-family: var(--font1);
+    letter-spacing: 1.3px;
 }
 .menu a.select{
     display: block;
     text-decoration: none;
     color: white;
     opacity: 1;
+    font-size: 1.2em;
 }
 .menu a:hover{
     opacity: 1;
+}
+
+.content{
+    position: relative;
+    left: 95%;
+    bottom: 10%;
+    width: 83vw;
+    margin-top: 0%;
+    height: 100%;
+    text-align: left;
+}
+.content h1{
+    font-family: var(--font1) ;
+    padding-left: 2%;
+    margin-top: 25%;
+    font-size: 5em;
+    letter-spacing: 5px;
+}
+.content h1 > span{
+    color: var(--cor1);
+}
+.content h3{
+    font-family: var(--font1);
+    padding-left: 2.5%;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+    color: rgba(0, 0, 0, 0.808);
+}
+.content h3 > a{
+    color: var(--cor1);
+    text-decoration: none;
+}
+.content h3 > a:hover{
+    color: var(--cor2);
+    text-decoration: underline;
+}
+.content p{
+    font-family: var(--font2);
+    width: 70%;
+    padding-top: 2%;
+    padding-left: 2.5%;
+    color: black;
+    font-weight: bold;
+}
+.icons-social{
+    margin-left: 2%;
+    padding-left: 55%;
+}
+.icons-social a > img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10%;
+    margin-left: 2%
+}
+.icons-social a > img:hover{
+        background-color: var(--cor1);
+        border-radius: 50%;
 }
